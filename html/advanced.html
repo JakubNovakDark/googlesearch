@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="nav-links">
+            <a href="index.html">Hlavní vyhledávání</a>
+        </div>
+
+        <h2 class="advanced-header">Pokročilé vyhledávání</h2>
+        
+        <form class="advanced-form" action="https://www.google.com/search">
+            <div class="adv-option">
+                <label>Všechna tato slova:</label>
+                <input type="text" name="as_q">
+            </div>
+            <div class="adv-option">
+                <label>Přesně toto slovo nebo frázi:</label>
+                <input type="text" name="as_epq">
+            </div>
+            <div class="adv-option">
+                <label>Kterékoliv z těchto slov:</label>
+                <input type="text" name="as_oq">
+            </div>
+            <div class="adv-option">
+                <label>Žádné z těchto slov:</label>
+                <input type="text" name="as_eq">
+            </div>
+            <div class="adv-button-container">
+                <input type="submit" value="Pokročilé vyhledávání" class="adv-button">
+            </div>
+        </form>
+    </body>
+</html>
