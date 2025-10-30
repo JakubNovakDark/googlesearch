@@ -1,8 +1,8 @@
-/* =======================
-   GOOGLE SEARCH STYLING
-   ======================= */
+/* ===========================
+   Google Search CSS Styles
+   =========================== */
 
-/* Reset stylů */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Hlavní pozadí */
+/* Základní styl stránky */
 body {
   background-color: #fff;
   color: #202124;
@@ -19,28 +19,30 @@ body {
   min-height: 100vh;
 }
 
-/* Horní navigace */
-.topnav {
-  width: 100%;
+/* Navigační odkazy nahoře */
+.nav-links {
   text-align: right;
-  padding: 15px 30px;
   background-color: #f8f9fa;
+  padding: 15px 30px;
   border-bottom: 1px solid #dadce0;
 }
 
-.topnav a {
+.nav-links a {
   color: #1a73e8;
   text-decoration: none;
-  margin-left: 15px;
   font-size: 14px;
 }
 
-.topnav a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
-/* Střed stránky (hlavní obsah) */
-.center {
+/* -------------------------------
+   INDEX + IMAGE SEARCH STYLING
+-------------------------------- */
+
+.center,
+body.image-search {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -50,39 +52,129 @@ body {
   padding: 40px;
 }
 
-/* Nadpis */
-.center h1 {
-  font-size: 48px;
-  font-weight: 400;
-  color: #202124;
+/* Logo uprostřed */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
   margin-bottom: 30px;
 }
 
-/* Vyhledávací formulář */
-.search-form {
+.logo img {
+  width: 272px;
+  height: auto;
+}
+
+/* Vyhledávací formulář pro hlavní i image search */
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 500px;
 }
 
-.search-form input[type="text"] {
-  width: 100%;
+.search-bar {
+  width: 500px;
+  max-width: 80%;
   padding: 12px 20px;
   border: 1px solid #dadce0;
   border-radius: 24px;
   font-size: 16px;
   outline: none;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
 
-.search-form input[type="text"]:focus {
+.search-bar:focus {
   box-shadow: 0 0 4px 1px rgba(26, 115, 232, 0.3);
   border-color: #1a73e8;
 }
 
 /* Tlačítko */
-.search-form button {
-  margin-top: 20px;
-  backg
+.button-container {
+  margin-top: 25px;
+}
+
+.search-button {
+  background-color: #1a73e8;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: #1558b0;
+}
+
+/* -------------------------------
+   ADVANCED SEARCH
+-------------------------------- */
+
+.advanced-header {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 50px 0 30px 50px;
+}
+
+.advanced-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 60%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.adv-option {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.adv-option label {
+  font-size: 14px;
+  color: #202124;
+}
+
+.adv-option input {
+  padding: 8px 10px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.adv-option input:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+/* Tlačítko v advanced search */
+.adv-button-container {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.adv-button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.adv-button:hover {
+  background-color: #1558b0;
+}
+
+/* Malý text pod formulářem */
+.hint {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #5f6368;
+}
